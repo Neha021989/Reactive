@@ -8,7 +8,7 @@ import org.springframework.stereotype.Repository;
 import com.example.demo.model.Customer;
 
 @Repository
-public interface CustomerRepository extends MongoRepository<Customer, String>,QuerydslPredicateExecutor<Customer>,QuerydslBinderCustomizer<QCustomer> {
+public interface CustomerRepository extends MongoRepository<Customer, String>,QuerydslPredicateExecutor<Customer>{
 
 	
 }
