@@ -43,12 +43,7 @@
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter-web</artifactId>
-			 <exclusions>
-            <exclusion>
-                <groupId>org.springframework.boot</groupId>
-                <artifactId>spring-boot-starter-tomcat</artifactId>
-            </exclusion>
-        </exclusions>
+			
 		</dependency>
 
 		<dependency>
@@ -76,16 +71,11 @@
 			<version>2.0.1.RELEASE</version>
 			<scope>test</scope>
 		</dependency>
-		 <dependency>
-            <groupId>org.springframework.boot</groupId>
-            <artifactId>spring-boot-starter-tomcat</artifactId>
-            <scope>provided</scope>
-        </dependency>
 		<dependency>
-				<groupId>javax.el</groupId>
-				<artifactId>javax.el-api</artifactId>
-				<version>3.0.0</version>
-			</dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-tomcat</artifactId>
+			<scope>provided</scope>
+		</dependency>
 	</dependencies>
 	<dependencyManagement>
 		<dependencies>
@@ -96,6 +86,7 @@
 				<type>pom</type>
 				<scope>import</scope>
 			</dependency>
+		
 		</dependencies>
 	</dependencyManagement>
 	<build>
@@ -161,7 +152,7 @@
 			</snapshots>
 		</pluginRepository>
 	</pluginRepositories>
-<distributionManagement>
+	<distributionManagement>
 		<repository>
 			<id>maven.jenkins-ci.org</id>
 			<url>https://repo.jenkins-ci.org/releases</url>
