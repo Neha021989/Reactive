@@ -10,10 +10,5 @@ import com.example.demo.model.QCustomer;
 @Repository
 public interface CustomerRepository extends MongoRepository<Customer, String>,QuerydslPredicateExecutor<Customer>,QuerydslBinderCustomizer<QCustomer> {
 
-	 @Override
-	  default public void customize(QuerydslBindings bindings, QCustomer customer) {
-
-	    bindings.bind(customer.customerName).first((path, value) -> path.containsIgnoreCase(value));    
-	    bindings.bind(customer.customerAddress).first((path, value) -> path.containsIgnoreCase(value));                                 
-	  }
+	
 }
